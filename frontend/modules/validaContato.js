@@ -11,6 +11,14 @@ export default class Contato {
 
   events() {
     if (!this.form) return;
+    const telInput = document.getElementById("telefone");
+    telInput.addEventListener("input", (e) => {
+      if (!e.target.value) return "";
+      e.target.value = e.target.value.replace(/\D/g, "");
+      e.target.value = e.target.value.replace(/(\d{2})(\d)/, "($1) $2");
+      e.target.value = e.target.value.replace(/(\d)(\d{4})$/, "$1-$2");
+      return e.target.value;
+    });
     this.form.addEventListener("submit", (e) => {
       e.preventDefault();
       this.validate(e);
@@ -43,6 +51,20 @@ export default class Contato {
       }
     } else {
       emailInput.classList.remove("border-danger");
+    }
+
+    if (telInput.value) {
+      if (telInput.value.length > 15) {
+        telInput.classList.add("border-danger");
+        errorsList.push(
+          "O número de telefone precisa ser do formato: (XX) XXXXX-XXXX"
+        );
+        error = true;
+      } else {
+        telInput.classList.remove("border-danger");
+      }
+    } else {
+      telInput.classList.remove("border-danger");
     }
 
     if (!emailInput.value && !telInput.value) {
