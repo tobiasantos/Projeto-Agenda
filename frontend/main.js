@@ -1,5 +1,6 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import Login from "./modules/validaLogin";
 import Contato from "./modules/validaContato";
