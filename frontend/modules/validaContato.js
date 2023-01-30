@@ -54,7 +54,7 @@ export default class Contato {
     }
 
     if (telInput.value) {
-      if (telInput.value.length > 15) {
+      if (telInput.value.length !== 15) {
         telInput.classList.add("border-danger");
         errorsList.push(
           "O número de telefone precisa ser do formato: (XX) XXXXX-XXXX"
