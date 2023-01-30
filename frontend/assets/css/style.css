@@ -1,3 +1,113 @@
 .instruction-login {
   min-height: 50px;
 }
+
+body {
+  font-family: "Prompt", sans-serif;
+  /* font-size: 20px;
+  line-height: 1.5; */
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  width: 100%;
+  padding: 8px 0;
+  background: #343a40;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.menu-container ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-container ul li {
+  margin: 0 24px;
+  display: flex;
+}
+
+.menu-container ul li a {
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  font-weight: 300;
+}
+
+.agenda-button {
+  flex: 3;
+}
+
+#nav-logo {
+  font-size: 40px;
+  color: white;
+}
+
+.addContato-button {
+  flex: 1;
+}
+
+.login-out-button {
+  flex: 1;
+}
+
+#login-bt {
+  padding-top: 20px;
+}
+
+.menu-content ul li a:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 900px) {
+  .responsive-table {
+    overflow-x: scroll;
+  }
+
+  table {
+    overflow: hidden;
+  }
+
+  nav {
+    height: 150px;
+  }
+
+  .nav-options {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .menu-container ul li a {
+    padding: 8px;
+    padding-top: 15px;
+  }
+
+  .navOpt-container {
+    margin: 15px 0;
+  }
+
+  .agenda-button {
+    flex: 1;
+  }
+
+  #nav-logo {
+    font-size: 25px;
+  }
+}
