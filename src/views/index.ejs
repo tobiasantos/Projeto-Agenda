@@ -1,5 +1,5 @@
 <%- include('includes/head') %>
-  <%- include('includes/nav2') %>
+  <%- include('includes/nav3') %>
 
     <div class="container">
       <div class="row">
@@ -10,6 +10,9 @@
           <p class="text-center lead">Seus contatos estão abaixo</p>
 
           <%- include('includes/messages') %>
+            <div class="d-flex justify-content-center">
+              <a class="btn btn-primary lead" href="/contato">Cadastre um contato</a>
+            </div>
 
             <% if(contatos.length> 0) { %>
               <div class="responsive-table">
@@ -28,7 +31,7 @@
                       <td>
                         <%= contato.email %>
                       </td>
-                      <td><a href="/contato/index/<%= contato._id %>">Editar</a></td>
+                      <td><a href="/contato/<%= contato._id %>">Editar</a></td>
                       <td><a class="text-danger" href="/contato/delete/<%= contato._id %>">Excluir</a></td>
                     </tr>
                     <% }) %>

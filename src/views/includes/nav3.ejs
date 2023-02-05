@@ -1,0 +1,12 @@
+<nav class="menu-content">
+  <div class="menu-container">
+    <div class="navOpt-container">
+      <a id="nav-logo" href="/">Agenda</a>
+      <% if(user) { %>
+        <a id="login-bt" href="/login/logout">Sair</a>
+        <% } else { %>
+          <a id="login-bt" href="/login/index">Entrar</a>
+          <% } %>
+    </div>
+  </div>
+</nav>
